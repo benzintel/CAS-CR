@@ -1,0 +1,61 @@
+@charset "UTF-8";
+body{
+	height:100%;
+	background-attachment: fixed;
+}
+.text-column
+{
+	text-align:center;
+	margin-top:150px;
+	font-family:Tahoma, Geneva, sans-serif;
+
+}
+.text-column h1,p,b
+{
+	
+	color:#08088A;
+	
+}
+.text-column h2
+{
+	text-align:left;
+	color:#08088A;
+	font-size:80px;
+	
+}
+.cas-cr{
+	width:280px;
+	height:90px;
+	margin:0 0 20px 350px;
+	background-image:url("Untitled.png");
+	float:left;
+}
+.kodera{
+	margin-left:100px;
+	width:1024px;
+	height:250px;
+	background-image:url("kodera.png");
+}
+.product
+{
+	padding:0 100px;
+}
+.product img
+{
+	width:200px;
+	height:200px;
+	margin:25px;
+	float:left;
+}
+.clean{
+	clear:both;
+}
+
+
+
+
+
+
+
+/* CSS Document */
+
