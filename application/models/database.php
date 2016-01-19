@@ -170,8 +170,8 @@ class database extends CI_Model{
     }
 
     function get_subcategory_all(){
-        $sql = "select * from sub_category";
-        $query = $this->db->query();
+        $sql = "SELECT sub_id , sub_name , sub_show ,category.cat_name FROM sub_category JOIN category ON sub_category.cat_id = category.cat_id";
+        $query = $this->db->query($sql);
 
         return $query->result_array();
     }
@@ -181,6 +181,66 @@ class database extends CI_Model{
         $query = $this->db->query($sql);
 
         return $query->result_array();
+    }
+
+    function get_data_subcategory($id){
+        $sql = "select * from sub_category where sub_id = $id";
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
+    }
+
+    function update_data_subcategory($id,$data){
+        $this->db->where('sub_id', $id);
+        $this->db->update('sub_category', $data);
+        $check = $this->db->affected_rows();
+
+        return $check;
+    }
+
+    function select_data_category($id){
+        $sql = "select * from category where cat_id = $id";
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
+    }
+
+    function insert_data_category($data){
+        $this->db->insert('category',$data);
+        $check = $this->db->affected_rows();
+
+        return $check;
+    }
+
+    function update_data_category($id,$data){
+        $this->db->where('cat_id', $id);
+        $this->db->update('category', $data);
+        $check = $this->db->affected_rows();
+
+        return $check;
+    }
+
+    function delete_category($id){
+        $this->db->where('cat_id', $id);
+        $this->db->delete('category');
+        $check = $this->db->affected_rows();
+
+        return $check;
+    }
+
+    function insert_sub_category($data){
+        $this->db->insert('sub_category',$data);
+        $check = $this->db->affected_rows();
+
+        return $check;
+    }
+
+    function delete_sub_category($id){
+        $this->db->where('sub_id', $id);
+        $this->db->delete('sub_category');
+        $check = $this->db->affected_rows();
+
+        return $check;
     }
 
     function getimage_database($id = NULL){
@@ -207,6 +267,12 @@ class database extends CI_Model{
         $check = $this->db->affected_rows();
 
         return $check;
+    }
+    function update_remove_ajax($id){
+        $sql = "UPDATE product SET pdf = '' WHERE pro_id = $id";
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
     }
 }
 

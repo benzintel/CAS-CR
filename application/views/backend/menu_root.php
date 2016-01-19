@@ -170,6 +170,8 @@
                                     <li><a href="index.php/backend/add_product" ><span class="glyphicon glyphicon-plus"></span> เพิ่มข้อมูล</a></li>
                                     <li><a href="index.php/backend/pageupload_images" ><span class="glyphicon glyphicon-plus"></span> เพื่มรูปภาพ</a></li>
                                     <li><a href="index.php/backend/add_news"><span class="glyphicon glyphicon-plus"></span> เพิ่มข่าว</a></li>
+                                    <li><a href="index.php/backend/add_category"><span class="glyphicon glyphicon-plus"></span> เพิ่มหมวดหมู่</a></li>
+                                    <li><a href="index.php/backend/add_sub_category"><span class="glyphicon glyphicon-plus"></span> เพิ่มหมวดหมู่ย่อย</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -187,6 +189,8 @@
 <!--                        </li>-->
                         <li><a href="index.php/backend/get_Pdata" ><span class="glyphicon glyphicon-list"></span> ตรวจสอบสินค้า <!-- span class="badge pull-right">42</span --></a></li>
                         <li><a href="index.php/backend/check_news_data" ><span class="glyphicon glyphicon-list"></span> จัดการข่าว</a></li>
+                        <li><a href="index.php/backend/get_category" ><span class="glyphicon glyphicon-list"></span> ตรวจสอบหมวด</a></li>
+                        <li><a href="index.php/backend/get_sub_category" ><span class="glyphicon glyphicon-list"></span> ตรวจสอบหมวดย่อย</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

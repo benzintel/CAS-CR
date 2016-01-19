@@ -39,12 +39,14 @@
         </div>
     </div>
 
+    <?php if($data['pro_pic']){ ?>
     <div class="form-group form-group-sm">
         <label class="col-sm-2 control-label" for="formGroupInputSmall">รูปภาพที่อยู่ในระบบ</label>
         <div class="col-sm-5">
             <img width="150" height="150" src="upload/<?= $data['pro_pic']; ?>"/>
         </div>
     </div>
+    <?php } ?>
 
     <div class="form-group form-group-sm">
         <label class="col-sm-2 control-label" for="formGroupInputSmall">รูปภาพ</label>
@@ -53,6 +55,15 @@
         </div>
     </div>
 
+    <div class="form-group form-group-sm">
+        <label class="col-sm-2 control-label" for="formGroupInputSmall">PDF</label>
+        <div class="col-sm-5">
+            <input type="file" class="form-control" id="pdf" name="pdf">
+            <?php if($data['pdf']){ echo "<span class='red' id='pdf_name'>".$data['pdf']."</span>"; ?>
+            <button  type="button" class="btn btn-danger" id="remove_pdf" name="remove_pdf">ลบไฟล์</button>
+            <?php } ?>
+        </div>
+    </div>
 
     <div class="form-group form-group-sm">
         <label class="col-sm-2 control-label" for="formGroupInputSmall">รายละเอียด</label>
@@ -105,6 +116,7 @@
     <input type="hidden" id="cat" name="cat" value="<?= $data['cat_id']; ?>" />
     <input type="hidden" id="sub" name="sub" value="<?= $data['sub_id']; ?>" />
     <input type="hidden" id="oldpic" name="oldpic" value="<?= $data['pro_pic']; ?>" />
+    <input type="hidden" id="oldpdf" name="oldpdf" value="<?= $data['pdf']; ?>" />
 <? } ?>
 
 </form>
@@ -121,7 +133,6 @@
     });
 
     $( document ).ready(function() {
-
         $("#form").validate({
             rules: {
                 pname:      "required",
@@ -143,6 +154,17 @@
             $.post( "index.php/backend/get_catagory", {name:i} ,function(data){
                 $("#test").html(data);
             });
+        });
+
+        $("#remove_pdf").click(function(){
+           var pdf_name = $("#pdf_name").text();
+           var id =  $("#id").val();
+           $.post("index.php/backend/remove_pdf" ,{ name: pdf_name, id:id } , function (data) {
+               alert(data);
+           });
+           $('#oldpdf').val("");
+           $('#pdf_name').remove();
+           $('#remove_pdf').remove();
         });
     });
 
