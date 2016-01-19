@@ -13,16 +13,16 @@
 </style>
 
 <div class="page-header">
-    <h3><span class="glyphicon glyphicon-th-list"></span> เพิ่มข่าวสู่ระบบ</h3>
+    <h3><span class="glyphicon glyphicon-th-list"></span> เพื่มหมวดหมู่</h3>
 </div>
 
-<form action="index.php/backend/edit_newssave/" class="form-horizontal" id="form" name="form" method="post" enctype="multipart/form-data">
+<form action="index.php/backend/edit_catagory_save" class="form-horizontal" id="form" name="form" method="post" enctype="multipart/form-data">
 
-<? foreach($data as $n){ ?>
+<?php foreach($cat as $data){ ?>
     <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">ชื่อข่าว</label>
+        <label class="col-sm-2 control-label" for="formGroupInputSmall">ชิ้อหมวด</label>
         <div class="col-sm-5">
-            <input class="form-control" type="text" name="pname" id="pname" placeholder="ชื่อข่าว" value="<?= $n['news_name']; ?>">
+            <input class="form-control" type="text" name="pname" id="pname" placeholder="ชิ้อหมวด" value="<?php echo $data['cat_name']; ?>">
         </div>
         <div class="col-sm-1 starred">
             <label>*</label>
@@ -30,48 +30,14 @@
     </div>
 
     <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">รูปภาพ</label>
-        <div class="col-sm-5">
-            <input type="file" class="form-control" id="pimage" name="pimage">
-        </div>
-    </div>
-
-    <?php if($n['news_pic']){ ?>
-    <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">รูปภาพที่อยู่ในระบบ</label>
-        <div class="col-sm-5">
-            <img width="150" height="150" src="upload/<?= $n['news_pic']; ?>"/>
-        </div>
-    </div>
-    <? } ?>
-
-    <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">youtube</label>
-        <div class="col-sm-5">
-            <input type="text" class="form-control" id="youtube" name="youtube" value="<?= $n['news_youtube']; ?>">
-        </div>
-    </div>
-
-    <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">รายละเอียด</label>
-        <div class="col-sm-9">
-            <textarea class="form-control" name="editor1" name="editor1"><?= $n['news_detail']; ?></textarea>
-        </div>
-    </div>
-
-    <div class="form-group form-group-sm">
         <label class="col-sm-2 control-label" for="formGroupInputSmall">แสดงผล</label>
         <div class="col-sm-5">
             <select name="show" id="show" class="form-control">
-                <option <? if($n['news_show'] == 0){ echo "selected"; } ?> value="0">ไม่แสดงผล</option>
-                <option <? if($n['news_show'] == 1){ echo "selected"; } ?> value="1">แสดงผล</option>
+                <option <? if($data['cat_show'] == 0){ echo "selected"; } ?> value="0">ไม่แสดงผล</option>
+                <option <? if($data['cat_show'] == 1){ echo "selected"; } ?> value="1">แสดงผล</option>
             </select>
         </div>
     </div>
-
-    <input type="hidden" id="id" name="id" value="<?= $n['news_id']; ?>" />
-    <input type="hidden" id="oldpic" name="oldpic" value="<?= $n['news_pic']; ?>" />
-<? } ?>
 
     <div class="form-group form-group-sm">
         <div class="col-sm-2 control-label">
@@ -81,6 +47,10 @@
             <button type="submit" class="btn btn-success">บันทึก</button>
         </div>
     </div>
+
+    <input type="hidden" id="id" name="id" value="<?php echo $data['cat_id']; ?>"/>
+<?php } ?>
+
 
 </form>
 
@@ -96,6 +66,9 @@
     });
 
     $( document ).ready(function() {
+        $('#myTable').DataTable(
+            { "order": [[ 0, "asc" ]] }
+        );
         $("#form").validate({
             rules: {
                 pname:      "required"

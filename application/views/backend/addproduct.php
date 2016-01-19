@@ -46,7 +46,12 @@
         </div>
     </div>
 
-
+    <div class="form-group form-group-sm">
+        <label class="col-sm-2 control-label" for="formGroupInputSmall">PDF</label>
+        <div class="col-sm-5">
+            <input type="file" class="form-control" id="pdf" name="pdf">
+        </div>
+    </div>
 
     <div class="form-group form-group-sm">
         <label class="col-sm-2 control-label" for="formGroupInputSmall">รายละเอียด</label>

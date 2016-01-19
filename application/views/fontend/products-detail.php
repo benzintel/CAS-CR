@@ -19,6 +19,13 @@
             <?= $data['pro_detail']; ?>
         </ul>
     </div>
+    <?php if($data['pdf']){ ?>
+
+        <object data="http://<?= $_SERVER["HTTP_HOST"] ?>/upload/<?= $data['pdf']; ?>" type="application/pdf" width="100%" height="800">
+            <p>Alternative text - include a link <a href="http://<?= $_SERVER["HTTP_HOST"] ?>/upload/<?= $data['pdf']; ?>">to the PDF!</a></p>
+        </object>
+
+    <?php } ?>
     <div class="detail-vdo">
 <!--        <div class="detail-vdo-box">-->
             <? if($data['youtube']){
