@@ -38,7 +38,7 @@
         <tr>
             <td><? ++$i; if($i <= 9){echo "0";} echo $i; ?></td>
             <td><?= $data['sub_name']; ?></td>
-            <td><?= $data['cat_name']; ?></td>
+            <td><? if($data['cat_id'] == 99){echo '';}else{ echo $data['cat_name']; } ?></td>
             <td><?= $note[$data['sub_show']];?></td>
             <td><a href="index.php/backend/edit_sub_category/<?= $data['sub_id']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
             <td><a onclick="return confirm('ยืนยันการลบข้อมูล?');" href="index.php/backend/delete_sub_category/<?= $data['sub_id']; ?>"><span class="glyphicon glyphicon-remove red "></span></a></td>
