@@ -126,7 +126,8 @@
                 pname:   "<p class='red'>กรุณากรอกชื่อสินค้า</p>",
                 pdetail: "<p class='red'>กรุณากรอกข้อมูลโดยย่อ</p>"
             },
-        })
+        });
+
         var i = $("#pcat").val();
         $.post( "index.php/backend/get_catagory", {name: i} ,function(data){
             $("#test").html(data);

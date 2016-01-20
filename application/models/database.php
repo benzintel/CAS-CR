@@ -66,7 +66,7 @@ class database extends CI_Model{
     }
 
     function get_Data_all(){
-        $sql = "select * from product INNER JOIN category ON product.cat_id = category.cat_id";
+        $sql = "SELECT p.pro_id as pro_id, p.pro_name as pro_name, p.pro_title as pro_title , c.cat_name as cat_name , p.pro_show as pro_show , p.pro_pic as pro_pic , p.cat_id as cat_id  FROM product p JOIN category c ON (p.cat_id = c.cat_id OR p.cat_id = 99 ) GROUP BY p.pro_id";
         $query = $this->db->query($sql);
 
         return $query->result_array();
@@ -81,7 +81,7 @@ class database extends CI_Model{
     }
 
     function get_data_select($id){
-        $sql = "select * from product INNER JOIN category ON product.cat_id = category.cat_id where product.pro_id = $id";
+        $sql = "select * from product where product.pro_id = $id";
         $query = $this->db->query($sql);
 
         return $query->result_array();
@@ -170,7 +170,7 @@ class database extends CI_Model{
     }
 
     function get_subcategory_all(){
-        $sql = "SELECT sub_id , sub_name , sub_show ,category.cat_name FROM sub_category JOIN category ON sub_category.cat_id = category.cat_id";
+        $sql = "SELECT sub_id , sub_category.cat_id , sub_name , sub_show ,category.cat_name FROM sub_category JOIN category ON (sub_category.cat_id = category.cat_id OR sub_category.cat_id = 99 ) GROUP BY sub_category.sub_id";
         $query = $this->db->query($sql);
 
         return $query->result_array();
@@ -226,6 +226,22 @@ class database extends CI_Model{
         $check = $this->db->affected_rows();
 
         return $check;
+    }
+
+    function clear_category_in_subcat_and_product($id){
+        $data = array(
+            'cat_id' => '99',
+            'sub_show' => '0'
+        );
+        $this->db->where('cat_id', $id);
+        $this->db->update('sub_category', $data);
+        $data = array(
+            'pro_show' => '0',
+            'cat_id'   => '99',
+            'sub_id'   => '99'
+        );
+        $this->db->where('cat_id', $id);
+        $this->db->update('product', $data);
     }
 
     function insert_sub_category($data){

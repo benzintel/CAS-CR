@@ -94,6 +94,9 @@
         <label class="col-sm-2 control-label" for="formGroupInputSmall">หมวดหมู่</label>
         <div class="col-sm-5">
             <select name="pcat" id="pcat" class="form-control">
+                <? if(empty($data['cat_id'])){?>
+                    <option value=""></option>
+                <? } ?>
                 <? foreach($cat as $category){ ?>
                     <option <? if($data['cat_id'] == $category['cat_id']){ echo "selected"; } ?> value="<?= $category['cat_id']; ?>"><?= $category['cat_name']; ?></option>
                 <? } ?>

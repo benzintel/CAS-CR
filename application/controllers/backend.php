@@ -135,11 +135,13 @@ class backend extends SecureController {
             //$part =		$_SERVER['DOCUMENT_ROOT']."/upload/";
         }
         if (!$this->upload->do_upload('pdf')){		 // Can't upload
-            $name = $this->input->post('oldpdf');
+            $name_pdf = $this->input->post('oldpdf');
         }
         else{ 												// Can upload
-            if($this->input->post('oldpdf') != $this->input->post('oldpdf')) {
-                unlink("upload/".$this->input->post('oldpdf'));
+            if(file_exists("upload/".$this->input->post('oldpdf'))){
+                if($this->input->post('oldpdf') != $this->input->post('pdf')) {
+                    unlink("upload/".$this->input->post('oldpdf'));
+                }
             }
             $upload_pdf = array('upload_data' => $this->upload->data());
             $name_pdf = 	$upload_pdf['upload_data']['file_name'];
@@ -414,6 +416,7 @@ class backend extends SecureController {
 
     public function delete_category(){
         $id = $this->uri->segment(3);
+        $this->database->clear_category_in_subcat_and_product($id);
         $check = $this->database->delete_category($id);
 
         if ($check == 1) {

@@ -28,10 +28,10 @@
     <? $note = array('<label class="red">ไม่แสดงผล</label>','<label class="green">แสดงผล</label>'); ?>
     <? foreach($pro as $i => $data) { ?>
         <tr>
-            <td><?= $data['pro_id'] ?></td>
+            <td><? ++$i; if($i <= 9){echo "0";} echo $i; ?></td>
             <td><?= $data['pro_name']; ?></td>
             <td><?= $data['pro_title']; ?></td>
-            <td><?= $data['cat_name']; ?></td>
+            <td><? if($data['cat_id'] == 99){ echo '<label class="red">ไม่มีหมวดหลัก</label>';}else{ echo $data['cat_name']; } ?></td>
             <td><?= $note[$data['pro_show']]; ?></td>
             <td><img border="3" width="120px" height="60px" src="upload/<?=$data['pro_pic'];?>"/></td>
             <td><a href="index.php/backend/edit_Pdata/<?= $data['pro_id']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
