@@ -290,6 +290,13 @@ class database extends CI_Model{
 
         return $query->result_array();
     }
+
+    function select_news_detail($id){
+        $sql = "SELECT * FROM news WHERE news_id = $id";
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
+    }
 }
 
 ?>
