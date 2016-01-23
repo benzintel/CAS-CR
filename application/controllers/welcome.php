@@ -68,6 +68,31 @@ class Welcome extends CI_Controller {
             $data['alert'] = "ไม่พบสินค้าในหมวดนี้";
         }
 
+        foreach($data['data'] as $key => $val){
+            if($val['pro_title']){
+                $detail = strip_tags($val['pro_title']);
+                if(strlen($detail) >= 150){
+                    $d = substr($detail,0,150)."...";
+                }else{
+                    $d = strip_tags($val['pro_title']);
+                }
+                $data['data'][$key]['pro_title'] = $d;
+            }
+            if($val['pro_name']){
+                $detail = strip_tags($val['pro_name']);
+                if(strlen($detail) >= 50){
+                    $d = substr($detail,0,50)."...";
+                }else{
+                    $d = strip_tags($val['pro_name']);
+                }
+                $data['data'][$key]['pro_name'] = $d;
+            }
+        }
+//
+//        echo "<PRE>";
+//        print_r($data);
+//        exit;
+
         $news['news'] = $this->update_news();
         $this->load->view('fontend/menu_root',$news);
         $this->load->view('fontend/product',$data);
