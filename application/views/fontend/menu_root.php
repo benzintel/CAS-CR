@@ -168,11 +168,12 @@
 
                     <br><br>
                     <img src="img/tab-news.png">
+
                     <?php foreach($news as $data){ ?>
 
                     <ul class="col-r2">
                         !-- NEWS --!
-<!--                        <li><a href="#"><img src="img/ad1.jpg"></a></li>-->
+                        <li><a href="index.php/welcome/news/?news=<?php echo $data['news_id']; ?>"><?php echo $data['news_pic']; ?></a></li>
                         <li><a href="index.php/welcome/news/?news=<?php echo $data['news_id']; ?>"><?php echo $data['news_name']; ?></a></li>
                         !-- End News --!
                     </ul>

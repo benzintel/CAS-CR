@@ -27,12 +27,10 @@
 
     <?php } ?>
     <div class="detail-vdo">
-<!--        <div class="detail-vdo-box">-->
             <? if($data['youtube']){
                 $youtube = 'https://www.youtube.com/embed/';
                 $youtube .= end(explode("/",$data['youtube']));
                 echo "<h4>VDO details</h4>";
                 echo '<iframe width="240" height="150" src="'.$youtube.'" frameborder="0" allowfullscreen></iframe>';
             } ?>
-<!--        </div>-->
 <? } ?>
