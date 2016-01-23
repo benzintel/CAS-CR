@@ -104,12 +104,12 @@
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=10">&nbsp;&nbsp;Accessories</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=10">&nbsp;&nbsp;Other Categories</a></li>
                     </ul>
-                    <ul class="col-r1">
-                        <a href="#"><img src="img/bar-km.png"></a>
-                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Electric Stripping Machine</a></li>
-                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Accessories</a></li>
-                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Other Categories</a></li>
-                    </ul>
+<!--                    <ul class="col-r1">-->
+<!--                        <a href="#"><img src="img/bar-km.png"></a>-->
+<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Electric Stripping Machine</a></li>-->
+<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Accessories</a></li>-->
+<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Other Categories</a></li>-->
+<!--                    </ul>-->
                     <ul class="col-r1">
                         <a href="#"><img src="img/bar-km.png"></a>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Electric Stripping Machine</a></li>
