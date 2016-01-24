@@ -162,3 +162,4 @@ class Welcome extends CI_Controller {
         return $new_string;
     }
 }
+

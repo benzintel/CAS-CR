@@ -61,7 +61,7 @@
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <div class="item active"><img src="img/sl1.png" > </div>
+                    <div class="item active"><img src="img/slide-ko.png" > </div>
                     <div class="item"><img src="img/sl2.png"></div>
                     <div class="item"><img src="img/sl3.png" > </div>
                 </div>
@@ -104,12 +104,7 @@
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=10">&nbsp;&nbsp;Accessories</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=10">&nbsp;&nbsp;Other Categories</a></li>
                     </ul>
-<!--                    <ul class="col-r1">-->
-<!--                        <a href="#"><img src="img/bar-km.png"></a>-->
-<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Electric Stripping Machine</a></li>-->
-<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Accessories</a></li>-->
-<!--                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Other Categories</a></li>-->
-<!--                    </ul>-->
+
                     <ul class="col-r1">
                         <a href="#"><img src="img/bar-km.png"></a>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Electric Stripping Machine</a></li>
@@ -126,46 +121,6 @@
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Other Categories[2]</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=11">&nbsp;&nbsp;Other Categories[3]</a></li>
                     </ul>
-                    
-<!--                    <ul class="col-r1">-->
-<!--                        <a href="#"><img src="img/bar-ot.jpg"></a>-->
-<!--                        <li class="dropdown"><i class="fa fa-angle-double-right"></i>-->
-<!--                            <a data-toggle="dropdown" href="index.php/welcome/product/?sub=12" style="font-size:14px; line-height:1;">&nbsp;Wire processing &nbsp;MACHINE</a>-->
-<!--                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=14">Wire stripper</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=15">cable cutter</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=16">wire and cable processing machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=17">terminal crimping machine / crimping tool</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=18">ferrule crimping machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=19">solar tools , machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=20">tube machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=21">DIN / duct cutter</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=22">hand tools</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=">All products</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li class="dropdown"><i class="fa fa-angle-double-right"></i>-->
-<!--                            <a data-toggle="dropdown" href="index.php/welcome/product/?sub=13">&nbsp;Industrial equipment</a>-->
-<!--                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=23">Tensile tester</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=24">sheet cutting machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=25">taping machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=26">grommet insection machine</a></li>-->
-<!--                                <li class="d-m"><a href="index.php/welcome/product/?sub=">All products</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li class="dropdown"><i class="fa fa-angle-double-right"></i>-->
-<!--                                <a data-toggle="dropdown" href="index.php/welcome/product/?sub=" style="font-size:14px; line-height:1;">&nbsp;Environmental &nbsp;equipment</a>-->
-<!--                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
-<!--                                    <li class="d-m"><a href="index.php/welcome/product/?sub=27">Sprayer / mist machine</a></li>-->
-<!--                                    <li class="d-m"><a href="index.php/welcome/product/?sub=28">bicycle inflator machine</a></li>-->
-<!--                                    <li class="d-m"><a href="index.php/welcome/product/?sub=29">baking soda blast</a></li>-->
-<!--                                    <li class="d-m"><a href="index.php/welcome/product/?sub=30">high pressure cleaning and sterilizing machine</a></li>-->
-<!--                                    <li class="d-m"><a href="index.php/welcome/product/?sub=">All products</a></li>-->
-<!--                                </ul>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-
                     <br><br>
                     <img src="img/tab-news.png">
 
