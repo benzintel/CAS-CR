@@ -124,16 +124,16 @@
                     <br><br>
                     <img src="img/tab-news.png">
 
-                    <?php foreach($news as $data){ ?>
+                    <?php foreach($news as $key => $data){ if($key <= 3){ ?>
 
                     <ul class="col-r2">
                         !-- NEWS --!
-                        <li><a href="index.php/welcome/news/?news=<?php echo $data['news_id']; ?>"><?php echo $data['news_pic']; ?></a></li>
+                        <li><a href="index.php/welcome/news/?news=<?php echo $data['news_id']; ?>"><img src="upload/<?php echo $data['news_pic']; ?>" alt=""></a></li>
                         <li><a href="index.php/welcome/news/?news=<?php echo $data['news_id']; ?>"><?php echo $data['news_name']; ?></a></li>
                         !-- End News --!
                     </ul>
 
-                    <?php } ?>
+                    <?php }} ?>
                 </div>
                 <div class="col-l">
                     <div class="col-l1">

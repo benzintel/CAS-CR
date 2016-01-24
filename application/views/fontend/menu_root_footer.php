@@ -53,7 +53,7 @@
             $("#link").removeClass("active");
             $("#link3").removeClass("active");
             $("#link4").removeClass("active");
-        }else if(page == "news"){
+        }else if(page == "news" || page == 'news_detail'){
             $("#link3").addClass("active");
             $("#link").removeClass("active");
             $("#link1").removeClass("active");

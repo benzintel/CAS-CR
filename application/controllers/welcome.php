@@ -115,15 +115,23 @@ class Welcome extends CI_Controller {
     }
 
     public function news(){
-        $id = $this->input->get('news');
         $news['news'] = $this->update_news();
-        $this->load->view('fontend/menu_root',$news);
-        if($id != ''){
-            $data['source'] = $this->database->get_data_news($id);
-            $this->load->view('fontend/news',$data);
-        }else{
-            $this->load->view('fontend/news');
+        foreach($news['news'] as $key => $data){
+            $news['news'][$key]['news_detail'] = $this->covert_tag($news['news'][$key]['news_detail']);
+            if(strlen(strip_tags($data['news_name'])) > 50){
+                $news['news'][$key]['news_name'] = substr(strip_tags($data['news_name']),0,100)."...";
+            }else{
+                $news['news'][$key]['news_name'] = strip_tags($news['news'][$key]['news_name']);
+            }
+            if(strlen(strip_tags($data['news_detail'])) > 100){
+                $news['news'][$key]['news_detail'] = substr(strip_tags($data['news_detail']),0,100)."...";
+            }else{
+                $news['news'][$key]['news_detail'] = strip_tags($news['news'][$key]['news_detail']);
+            }
+
         }
+        $this->load->view('fontend/menu_root',$news);
+        $this->load->view('fontend/news');
         $this->load->view('fontend/menu_root_footer');
     }
 
@@ -133,4 +141,25 @@ class Welcome extends CI_Controller {
         $this->load->view('fontend/contacts');
         $this->load->view('fontend/menu_root_footer');
     }
+
+    public function news_detail(){
+        $id = $this->uri->segment(3);
+        $news['news'] = $this->update_news();
+        $data['news_data'] = $this->database->select_news_detail($id);
+        $data['news_data'][0]['news_detail'] = $this->covert_tag($data['news_data'][0]['news_detail']);
+        $this->load->view('fontend/menu_root',$news);
+        $this->load->view('fontend/news-detail',$data);
+        $this->load->view('fontend/menu_root_footer');
+    }
+
+    public function covert_tag($string){
+        // Covert htmlspecialchars To tag html
+        $from = array('&lt;', '&gt;');
+        $to = array('<', '>');
+        $new_string = str_replace($from, $to, $string);
+        //END Covert htmlspecialchars To tag html
+
+        return $new_string;
+    }
 }
+
