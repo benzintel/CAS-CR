@@ -10,8 +10,9 @@
 <? foreach ($news_data as $data) { ?>
     <div class="detail-item">
         <h3><a href="#"></a><?= $data['news_name']; ?></h3>
+        <?if($data['news_pic']){ ?>
         <img src="http://<?= $_SERVER["HTTP_HOST"] ?>/upload/<?= $data['news_pic']; ?>" alt="">
-
+        <? } ?>
         <div class="detail-box">
             <ul>
                 <?= $data['news_detail']; ?>

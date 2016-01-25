@@ -8,11 +8,13 @@
     <? foreach ($news as $key => $data) {
         if ($key <= 8) { ?>
             <div class="news-item">
+                <? if($data['news_pic']){ ?>
                 <div class="col-md-5">
                     <a href="index.php/welcome/news_detail/<?php echo $data['news_id']; ?>">
                         <img src="upload/<?= $data['news_pic']; ?>" alt="">
                     </a>
                 </div>
+                <? } ?>
 
                 <div class="news-item--ct col-md-7">
                     <h3 class="news-item--hd">
