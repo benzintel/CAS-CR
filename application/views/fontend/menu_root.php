@@ -86,13 +86,13 @@
                         <a href="#"><img src="img/bar-ko.jpg"></a>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=1">&nbsp;&nbsp;Casting</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=2">&nbsp;&nbsp;Castugnon</a></li>
-                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=3">&nbsp;&nbsp;Chrimping Machine</a></li>
+                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=3">&nbsp;&nbsp;Crimping Machine</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=4">&nbsp;&nbsp;Accessories</a></li>
                         <li><i class="fa fa-angle-double-right"></i><a href="index.php/welcome/product/?sub=5">&nbsp;&nbsp;Other Categories</a></li>
                     </ul>
                     <ul class="col-r1">
                         <a href="#"><img src="img/bar-ts.jpg"></a>
-                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=6">&nbsp;Wire Hardness Processing Inspection</a></li>
+                        <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=6">&nbsp;Wire Harness Processing Inspection</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=7">&nbsp;&nbsp;Crimp Terminal Total Inspection</a></li>
                         <li><i class="fa fa-th-list"></i><a href="index.php/welcome/product/?sub=8">&nbsp;&nbsp;Accessories</a></li>
                         <li><i class="fa fa-angle-double-right"></i><a href="index.php/welcome/product/?sub=9">&nbsp;&nbsp;Other Categories</a></li>

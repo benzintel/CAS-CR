@@ -1,4 +1,4 @@
-<div class="content-header"><h2>About us</h2></div><br>
+<div class="content-header"><h2>Contact us</h2></div><br>
 <p>CAS-CR Co.,Ltd. MMC Factory</p>
 <p>75/110 Moo 11,Phahonyothin Rd.,</p>
 <p>Klong Nueng Klong Luang, Pathumthani 12120 Thailand</p>
